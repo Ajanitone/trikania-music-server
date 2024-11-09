@@ -3,7 +3,7 @@ import Product from "../models/Product.js";
 export const addProduct = async (req, res) => {
   try {
     console.log("Hello from product add", req.body);
-    if (req.file) req.body.profileImage = req.file.path;
+    if (req.file) req.body.musicImage = req.file.path;
 
     const newProduct = await Product.create(req.body);
 
